@@ -33,31 +33,9 @@ use_cpu=0
 np.set_printoptions(suppress=True)
 torch.set_printoptions(precision=5)
 
-
-#---for complete data test-----
-#with gold samples
-# path=r'C:\Users\Zhenya\Desktop\S_Tau_Net_conference'
-# sample_file='PC_100_cycle.mat'
-
-# path=r'C:\Users\Zhenya\Desktop\ELM2021\FLIM_code_10_July\beads samples'
-# sample_file='beads_100c_p6.mat'
-
 #mouse cells
 path=r'C:\Users\Zhenya\Desktop\ELM2021\FLIM_code_10_July\Sample\cell data'
 sample_file='hist_6h1_lf82.mat'
-
-# path=r'C:\Users\Zhenya\Desktop\ELM2021\FLIM_code_10_July\Sample'
-# sample_file='pc3_probe1.mat'
-
-# path=r'C:\Users\Zhenya\Desktop\ELM2021\FLIM_code_10_July\Sample'
-# sample_file='PC3_1ball.mat'
-
-#without gold samples
-# path=r'C:\Users\Zhenya\Desktop\ELM2021\FLIM_code_10_July\Sample\1218_success'
-# sample_file='PC_100_cycle_NoGold.mat'
-
-# path=r'C:\Users\Zhenya\Desktop\ELM2021\FLIM_code_10_July\Sample\1218_success'
-# sample_file='PC2_100_cycle_NoGold.mat'
 
 DataSet = io.loadmat(os.path.join(path,sample_file))
 hist=DataSet.get('hist65536')  
